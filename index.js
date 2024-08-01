@@ -13,6 +13,14 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
 
+app.delete('/fabricante/:id',(req,res)=>{
+    const valor = req.params
+    console.log(valor)
+    console.log('---------------')
+    console.log(valor.id)
+    res.status(200).json({message: 'dados recebidos'})
+})
+
 app.post('/produto',(req,res)=>{
     const valores = req.body
     console.log(valores)
